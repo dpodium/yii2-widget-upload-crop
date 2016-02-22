@@ -1,0 +1,24 @@
+{
+    "name": "dpodium/yii2-widget-upload-crop",
+    "description": "Yii2 widget for file upload and allow user to zoom and crop the image",
+    "keywords": ["yii2", "widget", "fileupload", "crop", "zoom"],
+    "type": "yii2-extension",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Sionghuat Chng",
+            "email": "sionghuat.chng@dpodium.com",
+            "homepage": "http://www.dpodium.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/dpodium/yii2-widget-upload-crop",
+        "issues": "https://github.com/dpodium/yii2-widget-upload-crop/issues"
+    },
+    "require": {
+        "yiisoft/yii2": "2.0.*"
+    },
+    "autoload": {
+        "psr-4": { "dpodium\\yii2\\widget\\upload\\crop\\": "" }
+    }
+}
