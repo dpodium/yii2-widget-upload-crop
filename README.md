@@ -28,7 +28,36 @@ Usage
 _____
 This widget is ready with all required scripts in it's assets, just call the widget to render it:
 
-	echo \dpodium\yii2\widget\upload\crop\UploadCrop::widget(['form' => $form, 'model' => $model, 'attribute' => 'fieldName']);
+	echo \dpodium\yii2\widget\upload\crop\UploadCrop::widget(
+		[
+			'form' => $form,
+			'model' => $fileModel,
+			'attribute' => 'avatar',
+			'maxSize' => 300,
+			'imageSrc' => (isset($imageSrc)) ? $$imageSrc : '',
+			'title' => Yii::t('admin', 'Crop photo'),
+			'changePhotoTitle' => Yii::t('admin', 'Change photo'),
+			'jcropOptions' => [
+				'dragMode' => 'move',
+				'viewMode' => 1,
+				'autoCropArea' => '0.1',
+				'restore' => false,
+				'guides' => false,
+				'center' => false,
+				'movable' => true,
+				'highlight' => false,
+				'cropBoxMovable' => false,
+				'cropBoxResizable' => false,
+				'background' => false,
+				'minContainerHeight' => 500,
+				'minCanvasHeight' => 400,
+				'minCropBoxWidth' => 200,
+				'minCropBoxHeight' => 200,
+				'responsive' => true,
+				'toggleDragModeOnDblclick' => false
+			]
+		]
+	);
 
 
 ## Widget method options
