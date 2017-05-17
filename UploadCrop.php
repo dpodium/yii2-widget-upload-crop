@@ -120,9 +120,10 @@ class UploadCrop extends Widget
 //			echo Html::endTag('div');
 
 		Modal::begin([
+			'id' => 'cropper-modal-'. $this->imageOptions['id'],
 			'header' => '<h3>'.$this->title.'</h3>',
 			'closeButton' => [],
-			'footer' => Html::button('Cancel', ['id' => $this->imageOptions['id'].'_button_cancel', 'class' => 'btn btn-default']) . Html::button('Crop & Save', ['id' => $this->imageOptions['id'].'_button_accept', 'class' => 'btn btn-success']),
+			'footer' => Html::button('Cancel', ['id' => $this->imageOptions['id'].'_button_cancel', 'class' => 'btn btn-default', 'data-dismiss' => 'modal']) . Html::button('Crop & Save', ['id' => $this->imageOptions['id'].'_button_accept', 'class' => 'btn btn-success cropper-done']),
 			'size' => Modal::SIZE_LARGE,
 		]);
 
@@ -134,7 +135,7 @@ class UploadCrop extends Widget
 					echo Html::beginTag('div', ['class' => 'bounce3']);
 					echo Html::endTag('div');
 				echo Html::endTag('div');
-				echo Html::beginTag('div', ['id' => 'image-source', 'class' => 'col-centered']);
+		echo Html::beginTag('div', ['id' => 'image-source']);
 					echo Html::img('', $this->imageOptions);
 				echo Html::endTag('div');
 				echo Html::beginTag('div', ['style' => 'display: block;margin: 0 auto;text-align: center;']);
